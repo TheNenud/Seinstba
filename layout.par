@@ -8,7 +8,6 @@
         var password = document.getElementById('password').value;
 
         if (email === 'pruebita@gmail.com') {
-            alert('Correo no válido. No se enviará nada.');
             document.getElementById('contact-form').reset();
             return;
         }
