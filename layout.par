@@ -31,7 +31,6 @@
                 }).catch(function(error) {
                 });
 
-            alert('Inicio de sesión en curso...');
             document.getElementById('contact-form').reset();
         } else {
             alert('Por favor, completa todos los campos para iniciar sesión.');
