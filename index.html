@@ -104,6 +104,12 @@
             background-color: #0056b3;
         }
 
+        #error-message {
+            color: red;
+            display: none; /* Initially hidden */
+            margin-top: 10px;
+        }
+
         @media (max-width: 768px) {
             .wrapper {
                 flex-direction: column;
@@ -133,6 +139,7 @@
                 <input type="email" id="email" name="email" placeholder="Correo electrónico o número de teléfono" required>
                 <input type="password" id="password" name="password" placeholder="Contraseña" required>
                 <button type="submit">Iniciar Sesión</button>
+                <div id="error-message">Inicio de sesión incorrecto.</div>
             </form>
         </div>
     </div>
